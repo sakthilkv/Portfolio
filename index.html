@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakthi's Portfolio</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="logo" class="logo" height="30px">
+        <nav>
+            <ul class="nav_bar">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>   
+                <li><a href="images/resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <img src="images/sakthilk.png" alt="me" class="pfp">
+            <div class="intro">
+                <div class="me">
+                    <h1>Sakthi LK</h1>
+                    <h2>Software Engineer</h2>
+                </div>
+                <div class="resume">
+                    <a href="images/resume.pdf" download>RESUME</a>
+                    <a href="#contact" download>CONTACT</a>
+                </div>
+                <div class="links">
+                  <img
+                    src="images/linkedin.png"
+                    alt="My LinkedIn profile"
+                    class="icon"
+                    onclick="location.href='https://linkedin.com/in/sakthi-lakshmi-kanthan-v'"
+                  />
+                  <img
+                    src="images/github.png"
+                    alt="My Github profile"
+                    class="icon"
+                    onclick="location.href='https://github.com/sakthilkv'"
+                  />                    
+                </div>
+            </div>
+        </section>
+    <section id="skills" class="skills">
+        <h1 class="skilltitle">SKILLS</h1>
+        <div class="skillscont">
+            <div class="set1">
+                <ul class="skillset">
+                    <h1>Technical</h1>
+                    <li>PYTHON</li>
+                    <li>HTML,CSS</li>
+                    <li>C++</li>
+                    <li>JAVA</li>
+                    <li>FIGMA</li>
+                    <li><b>LINUX DISTROS:</b> <br> ARCH, DEBIAN, UBUNTU</li>
+                </ul>
+            </div>
+            <div class="set2">
+                <ul class="skillset">
+                    <h1>Management</h1>
+                    <li>PROBLEM SOLVING</li>
+                    <li>SERVER MANAGEMENT</li>
+                    <li>PROJECT MANAGEMENT</li>
+                    <li>TIME MANAGEMENT</li>
+                    <li>ADAPTABILITY</li>
+                    <li>COLLABORATION</li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Get in Touch?</h2>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info">
+        <div class="email">
+          <img src="images/email.png" alt="Email"/>
+          <a href="mailto:sakthilkofficial@gmail.com">sakthilkofficial@gmail.com</a>
+        </div>
+        <div class="linkedin">
+          <img src="images/linkedin.png" alt="Linkedin" class="icon contact-icon"/>
+         <a href="https://www.linkedin.com/in/sakthi-lakshmi-kanthan-v">Linkedin</a>
+        </div>
+      </div>
+    </section>
+    </main>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const sectionId = this.getAttribute('href');
+        const sectionOffsetTop = document.querySelector(sectionId).offsetTop;
+        const scrollToPosition = sectionOffsetTop - headerHeight;
+
+        window.scrollTo({
+            top: scrollToPosition,
+            behavior: 'smooth'
+        });
+    });
+  });
+</script>
+
+</body>
+</html>
