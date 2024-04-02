@@ -1,1 +1,1 @@
-This the porfolio created by me FOR OASIS INFOBYTE INTERNSHIP for WEB DEVELOPMENT AND DESIGN.
+This is the porfolio created by me FOR OASIS INFOBYTE internship for web development and design.
